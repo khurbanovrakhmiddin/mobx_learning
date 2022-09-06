@@ -1,0 +1,1 @@
+import 'dart:convert';import 'package:mobx_learning/models/post.dart';class Mapper{  /* Http Parsing */  static List<Post> parsePostList(String response) {    dynamic json = jsonDecode(response);    var data = List<Post>.from(json.map((x) => Post.fromJson(x)));    return data;  }}
